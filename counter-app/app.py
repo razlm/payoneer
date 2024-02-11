@@ -13,7 +13,7 @@ def handle_requests():
         return f'Counter value: {counter}'
     else:
         # Return the current counter value on GET request
-        return f'Current counter value:  {counter}'
+        return f'Current counter value: {counter}'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
