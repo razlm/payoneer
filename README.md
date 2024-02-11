@@ -15,20 +15,24 @@ Also you can Manually trigger the pipeline with branch name
 
 ## Getting Started
 
-1. Clone the repository:
+#  EVERYTHING SHOULD BE UP AND RUNNING BUT IF NOT:
 
-    ```bash
-    git clone <repository-url>
-    cd payoneer-counter-project
-    ```
+1. Enter the vm
 
-2. Build and run the service using Docker Compose:
+2. cd app
 
-    ```bash
-    docker-compose up -d --build
-    ```
+3. check if there is any docker running:
+    ```sudo docker ps```
 
-3. Access the counter service at http://ec2-3-120-148-111.eu-central-1.compute.amazonaws.com/.
+4. if not:
+    ```docker-compose up -d```
+
+5. Enter jenkins:
+    http://ec2-3-120-148-111.eu-central-1.compute.amazonaws.com:443/
+    user and pass sent by mail.
+    check The job pipeline.
+
+6. Access the counter service at http://ec2-3-120-148-111.eu-central-1.compute.amazonaws.com/.
    Also can curl post to increase and get to get the count
    ```curl -X POST http://ec2-3-120-148-111.eu-central-1.compute.amazonaws.com```
    ```curl -X GET http://ec2-3-120-148-111.eu-central-1.compute.amazonaws.com```
