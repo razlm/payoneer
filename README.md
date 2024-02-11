@@ -46,4 +46,3 @@ For any inquiries or issues, please feel free to reach out to the project author
 - **Email:** razleshem3@gmail.com
 
 Happy coding!
-
