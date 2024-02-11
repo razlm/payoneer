@@ -10,7 +10,7 @@ def handle_requests():
     if request.method == 'POST':
         # Increment the counter on each POST request
         counter += 1
-        return f'Counter value: {counter}'
+        return f'Counter value of the page: {counter}'
     else:
         # Return the current counter value on GET request
         return f'Current counter value: {counter}'
