@@ -40,11 +40,12 @@ pipeline {
             }
             steps {
                 script {
-                    sh '''
+                    echo "Running tests for branch: ${params.BRANCH}"
+                    sh """
                         ssh -i /var/jenkins_home/devops-exam.pem centos@ec2-3-120-148-111.eu-central-1.compute.amazonaws.com 'sudo docker run -d -p 90:80 --name counter-service-${params.BRANCH} counter-service'
                         sleep 10
                         ssh -i /var/jenkins_home/devops-exam.pem centos@ec2-3-120-148-111.eu-central-1.compute.amazonaws.com 'sudo docker stop counter-service-${params.BRANCH} && sudo docker rm counter-service-${params.BRANCH}'
-                    '''
+                    """
                 }
             }
         }
